@@ -10,7 +10,7 @@ public class Percolation {
     private int[] matrix;
 
     public Percolation(int N) {
-    // create N-by-N grid, with all sites blocked
+    // create N-by-N grid, with all sites blocked (root == 0)
         this.matrix = new int[N*N + 3];
         this.N = N;
         this.start = 1;
@@ -66,7 +66,6 @@ public class Percolation {
     }
 
     public void connect(int from, int to) {
-        //find parent
         if (getDepth(from) > getDepth(to)) {
             matrix[getRoot(to)] = getRoot(from);
         } else {
@@ -106,12 +105,6 @@ public class Percolation {
     }
 
     public static void main(String[] args) { // test client (optional)
-//        Scanner in  = new Scanner(System.in);
-//
-//
-//        int N = in.nextInt();
-//        int T = in.nextInt();
-
         Percolation pc = new Percolation(3);
         pc.open(0,0);
         pc.open(1,0);
