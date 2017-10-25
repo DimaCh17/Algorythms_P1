@@ -38,7 +38,7 @@ public class Sorting {
             int temp = arr[i];
             int j;
             for(j=i; j>=step && arr[j-step]>temp; j-=step) {
-                    arr[j] = arr[j-step];
+                arr[j] = arr[j-step];
             }
             arr[j] = temp;
         }
