@@ -29,7 +29,7 @@ public class TestSorting {
         System.out.print("Shell Sort");
         startTime = System.nanoTime();
         for (int i=0; i<numArrays; i++) {
-            Sorting.shellSort(arrays1[i]);
+            Sorting.shellSort(arrays2[i]);
         }
         System.out.println("Execution time: \t" + (System.nanoTime() - startTime));
 //        int[] arr = Sorting.randomArray(50,0,100);
